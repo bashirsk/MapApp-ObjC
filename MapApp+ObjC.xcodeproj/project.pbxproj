@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61022BF223034FD60082C220 /* RestaurantsLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61022BF123034FD60082C220 /* RestaurantsLocationViewController.m */; };
 		61FE91B6230341A300789BFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE91B5230341A300789BFD /* AppDelegate.m */; };
 		61FE91BC230341A300789BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FE91BA230341A300789BFD /* Main.storyboard */; };
 		61FE91BE230341A400789BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FE91BD230341A400789BFD /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61022BF023034FD60082C220 /* RestaurantsLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantsLocationViewController.h; sourceTree = "<group>"; };
+		61022BF123034FD60082C220 /* RestaurantsLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantsLocationViewController.m; sourceTree = "<group>"; };
 		61FE91B1230341A300789BFD /* MapApp+ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapApp+ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FE91B4230341A300789BFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FE91B5230341A300789BFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			children = (
 				61FE91B4230341A300789BFD /* AppDelegate.h */,
 				61FE91B5230341A300789BFD /* AppDelegate.m */,
+				61FE91CE23034E7300789BFD /* Models */,
 				61FE91CA230345A900789BFD /* ViewControllers */,
 				61FE91BA230341A300789BFD /* Main.storyboard */,
 				61FE91BD230341A400789BFD /* Assets.xcassets */,
@@ -73,10 +77,19 @@
 		61FE91CA230345A900789BFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				61022BF023034FD60082C220 /* RestaurantsLocationViewController.h */,
+				61022BF123034FD60082C220 /* RestaurantsLocationViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		61FE91CE23034E7300789BFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				61FE91CB2303464A00789BFD /* Restaurant.h */,
 				61FE91CC2303464A00789BFD /* Restaurant.m */,
 			);
-			path = ViewControllers;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,7 @@
 			files = (
 				61FE91CD2303464A00789BFD /* Restaurant.m in Sources */,
 				61FE91C4230341A400789BFD /* main.m in Sources */,
+				61022BF223034FD60082C220 /* RestaurantsLocationViewController.m in Sources */,
 				61FE91B6230341A300789BFD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB6CTV9S7J;
 				INFOPLIST_FILE = "MapApp+ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB6CTV9S7J;
 				INFOPLIST_FILE = "MapApp+ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

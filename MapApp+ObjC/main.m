@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "ViewControllers/Restaurant.h"
+#import "Models/Restaurant.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
