@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iuP-ox-RbJ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Restaurants Location View Controller-->
+        <scene sceneID="d6l-6O-4Kq">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="iuP-ox-RbJ" customClass="RestaurantsLocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dMg-tl-IC8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Do2-qa-bpz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Do2-qa-bpz" secondAttribute="bottom" id="GFY-ep-u7f"/>
+                            <constraint firstItem="Do2-qa-bpz" firstAttribute="trailing" secondItem="psb-kg-kIu" secondAttribute="trailing" id="GqT-fl-aIN"/>
+                            <constraint firstItem="Do2-qa-bpz" firstAttribute="leading" secondItem="psb-kg-kIu" secondAttribute="leading" id="Rgu-I8-Iml"/>
+                            <constraint firstItem="Do2-qa-bpz" firstAttribute="top" secondItem="dMg-tl-IC8" secondAttribute="top" id="b3B-Ye-wsv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="psb-kg-kIu"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Do2-qa-bpz" id="btd-gi-wGS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40E-oW-Aoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="-17.410714285714285"/>
         </scene>
     </scenes>
 </document>
