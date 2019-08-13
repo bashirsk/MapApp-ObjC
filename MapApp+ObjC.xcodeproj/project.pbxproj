@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		61FE91B6230341A300789BFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE91B5230341A300789BFD /* AppDelegate.m */; };
-		61FE91B9230341A300789BFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE91B8230341A300789BFD /* ViewController.m */; };
 		61FE91BC230341A300789BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FE91BA230341A300789BFD /* Main.storyboard */; };
 		61FE91BE230341A400789BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FE91BD230341A400789BFD /* Assets.xcassets */; };
 		61FE91C1230341A400789BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FE91BF230341A400789BFD /* LaunchScreen.storyboard */; };
 		61FE91C4230341A400789BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE91C3230341A400789BFD /* main.m */; };
+		61FE91CD2303464A00789BFD /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE91CC2303464A00789BFD /* Restaurant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61FE91B1230341A300789BFD /* MapApp+ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapApp+ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FE91B4230341A300789BFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FE91B5230341A300789BFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61FE91B7230341A300789BFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61FE91B8230341A300789BFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61FE91BB230341A300789BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61FE91BD230341A400789BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61FE91C0230341A400789BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61FE91C2230341A400789BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61FE91C3230341A400789BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61FE91CB2303464A00789BFD /* Restaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		61FE91CC2303464A00789BFD /* Restaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,7 @@
 			children = (
 				61FE91B4230341A300789BFD /* AppDelegate.h */,
 				61FE91B5230341A300789BFD /* AppDelegate.m */,
-				61FE91B7230341A300789BFD /* ViewController.h */,
-				61FE91B8230341A300789BFD /* ViewController.m */,
+				61FE91CA230345A900789BFD /* ViewControllers */,
 				61FE91BA230341A300789BFD /* Main.storyboard */,
 				61FE91BD230341A400789BFD /* Assets.xcassets */,
 				61FE91BF230341A400789BFD /* LaunchScreen.storyboard */,
@@ -69,6 +68,15 @@
 				61FE91C3230341A400789BFD /* main.m */,
 			);
 			path = "MapApp+ObjC";
+			sourceTree = "<group>";
+		};
+		61FE91CA230345A900789BFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61FE91CB2303464A00789BFD /* Restaurant.h */,
+				61FE91CC2303464A00789BFD /* Restaurant.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FE91B9230341A300789BFD /* ViewController.m in Sources */,
+				61FE91CD2303464A00789BFD /* Restaurant.m in Sources */,
 				61FE91C4230341A400789BFD /* main.m in Sources */,
 				61FE91B6230341A300789BFD /* AppDelegate.m in Sources */,
 			);
