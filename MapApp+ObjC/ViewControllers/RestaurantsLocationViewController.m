@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantsLocationViewController.h"
+#import "APIService.h"
 
 @interface RestaurantsLocationViewController ()
 
@@ -25,6 +26,12 @@ typedef void(^completion)(BOOL);
         } else {
             [self.locationManager requestWhenInUseAuthorization];
         }
+    }];
+    
+    [APIService fetchRestaurants:^(NSDictionary * _Nonnull responseDict) {
+        NSLog(@"%@", responseDict);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error);
     }];
 }
 
