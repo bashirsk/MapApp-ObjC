@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface APIService : NSObject
 
-+ (void)fetchRestaurants:(void(^)(NSDictionary *responseDict))success failure:(void(^)(NSError* error))failure;
++ (void)fetchRestaurantData:(void(^)(NSDictionary *responseDict))success failure:(void(^)(NSError* error))failure;
 
 @end
 

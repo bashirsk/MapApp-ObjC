@@ -10,7 +10,7 @@
 
 @implementation APIService
 
-+ (void)fetchRestaurants: (void(^)(NSDictionary *responseDict))success failure:(void(^)(NSError* error))failure {
++ (void)fetchRestaurantData: (void(^)(NSDictionary *responseDict))success failure:(void(^)(NSError* error))failure {
     NSString *urlStirng = @"https://www.frankieandbennys.com/trg_restaurant_feed/JSON";
     NSURL *url = [NSURL URLWithString:urlStirng];
     NSURLSession *urlSession = [NSURLSession sharedSession];
@@ -20,7 +20,6 @@
             failure(error);
         } else {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            NSLog(@"%@", json);
             success(json);
         }
     }];

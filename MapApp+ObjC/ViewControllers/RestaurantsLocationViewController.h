@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^completion)(BOOL);
 
 @interface RestaurantsLocationViewController : UIViewController
-
+@property (strong, nonatomic) NSMutableArray *restaurant;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 - (void) checkLocationAuthrizationStatus:(completion) pCompletion;
