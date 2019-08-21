@@ -8,6 +8,7 @@
 
 #import "RestaurantsLocationViewController.h"
 #import "APIService.h"
+#import "Restaurant.h"
 
 @interface RestaurantsLocationViewController ()
 
@@ -15,7 +16,29 @@
 
 typedef void(^completion)(BOOL);
 
-@implementation RestaurantsLocationViewController
+@implementation RestaurantsLocationViewController {
+    
+}
+
+- (void)fetchRestarants {
+    [APIService fetchRestaurantData:^(NSDictionary * _Nonnull responseDict) {
+        self.restaurant = [[NSMutableArray alloc] init];
+        for (NSDictionary *results in responseDict) {
+            NSString *name = [results objectForKey:@"name"];
+            NSString *latitude = [results objectForKey:@"latitude"];
+            NSString *longitude = [results objectForKey:@"longitude"];
+            NSString *body = [results objectForKey:@"body"];
+            Restaurant *restaurant = Restaurant.new;
+            restaurant.name = name;
+            restaurant.latitude = latitude;
+            restaurant.longitude = longitude;
+            restaurant.body = body;
+            [self.restaurant addObject:restaurant];
+        }
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,11 +51,7 @@ typedef void(^completion)(BOOL);
         }
     }];
     
-    [APIService fetchRestaurants:^(NSDictionary * _Nonnull responseDict) {
-        NSLog(@"%@", responseDict);
-    } failure:^(NSError * _Nonnull error) {
-        NSLog(@"%@", error);
-    }];
+    [self fetchRestarants];
 }
 
 - (void) checkLocationAuthrizationStatus:(completion) pCompletion {
