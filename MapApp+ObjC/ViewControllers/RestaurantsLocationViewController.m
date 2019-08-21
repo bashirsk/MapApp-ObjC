@@ -28,7 +28,7 @@ typedef void(^completion)(BOOL);
             NSString *latitude = [results objectForKey:@"latitude"];
             NSString *longitude = [results objectForKey:@"longitude"];
             NSString *body = [results objectForKey:@"body"];
-            Restaurant *restaurant = Restaurant.new;
+            Restaurant *restaurant = [[Restaurant alloc] init];
             restaurant.name = name;
             restaurant.latitude = latitude;
             restaurant.longitude = longitude;
